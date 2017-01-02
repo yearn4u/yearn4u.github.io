@@ -38,14 +38,14 @@ while (idx < items.Count)
 두 번째로 삭제해야 할 원소를 별도의 collection에 저장하고, 순회가 종료된 후에 일괄 삭제하는 방법이다.
 
 ```C#
-for (int i = 0; i < elements.Count; i++)
+var toRemove = new HashSet<T>();
+foreach(var item in items)
 {
-    if (<condition>)
-    {
-        // Decrement the loop counter to iterate this index again, since later elements will get moved down during the remove operation.
-        elements.RemoveAt(i--);
-    }
+     ...
+     if (some condition)
+          toRemove.Add(item);
 }
+items.RemoveAll(toRemove.Contains);
 ```
 
-[출처](http://stackoverflow.com/questions/1582285/how-to-remove-elements-from-a-generic-list-while-iterating-over-it)
+[출처: stackoverflow](http://stackoverflow.com/questions/1582285/how-to-remove-elements-from-a-generic-list-while-iterating-over-it)
