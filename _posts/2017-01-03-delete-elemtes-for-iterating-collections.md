@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# Collection 순회 도중에 원소 삭제 하는 방법
-published: false
+published: true
 date: 2017-01-03
 categories: [C#]
 ---
@@ -22,7 +22,6 @@ foreach (var item in items)
 
 
 첫 번째 방법으로, foreach를 포기하고 while loop을 사용하는 방법이다.
-
 
 ```C#
 int idx = 0;
