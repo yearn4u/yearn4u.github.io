@@ -10,7 +10,7 @@ C#에서 List, Dictionary 등의 Collection을 사용하면서 원소를 순회�
 
 그런데 다음과 같이 foreach 중에 원소를 삭제하면, Exception이 발생한다.
 
-```
+```csharp
 foreach (var item in items)
 {
    ...
@@ -20,7 +20,6 @@ foreach (var item in items)
 ```
 
 이와 같은 문제를 해결하기 위해서 여러가지 방법이 있을 수 있다.
-
 
 첫 번째 방법으로, foreach를 포기하고 while loop을 사용하는 방법이다.
 
@@ -35,7 +34,6 @@ while (idx < items.Count)
       ++idx;
 }
 ```
-
 
 두 번째 방법으로, 삭제해야 할 원소를 별도의 collection에 저장하고, 순회가 종료된 후에 일괄 삭제하는 방법이다.
 
