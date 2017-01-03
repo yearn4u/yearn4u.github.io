@@ -10,7 +10,7 @@ C#에서 List, Dictionary 등의 Collection을 사용하면서 원소를 순회�
 
 그런데 다음과 같이 foreach 중에 원소를 삭제하면, Exception이 발생한다.
 
-{% raw %}
+---
 ```csharp
 foreach (var item in items)
 {
@@ -19,7 +19,7 @@ foreach (var item in items)
       items.Remove(item);
 }
 ```
-{% endraw %}
+---
 
 이와 같은 문제를 해결하기 위해서 여러가지 방법이 있을 수 있다.
 
